@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt AX3000
+name: Build OpenWrt-Redmi-AX3000
 
 on:
   repository_dispatch:
@@ -22,6 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/hzyitc/openwrt-redmi-ax3000
   REPO_BRANCH: ipq50xx-mainline-kernel-5.15-openwrt-23.05
+  TARGET_NAME: Redmi-AX3000
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
@@ -166,7 +167,7 @@ jobs:
         id: tag
         if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         run: |
-          echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
+          echo "::set-output name=release_tag::env.TARGET_NAME - $(date +"%Y.%m.%d-%H%M")"
           touch release.txt
           [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
           [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
