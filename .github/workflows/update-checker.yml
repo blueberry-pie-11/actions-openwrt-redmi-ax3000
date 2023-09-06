@@ -12,7 +12,7 @@
 name: Update Checker
 
 env:
-  REPO_URL: https://github.com/Purple-wind-bell/openwrt-redmi-ax3000
+  REPO_URL: https://github.com/hzyitc/openwrt-redmi-ax3000
   REPO_BRANCH: ipq50xx-mainline-kernel-5.15-openwrt-23.05
 
 on:
