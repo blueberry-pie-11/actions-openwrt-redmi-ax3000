@@ -167,7 +167,7 @@ jobs:
         id: tag
         if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         run: |
-          version_tag=${{ env.TARGET_NAME}} - $(date +"%Y.%m.%d-%H%M")
+          version_tag="${{ env.TARGET_NAME}} - $(date +"%Y.%m.%d-%H%M")"
           echo "::set-output name=release_tag::${version_tag}"
           touch release.txt
           [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
