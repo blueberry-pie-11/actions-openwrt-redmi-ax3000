@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt-Redmi-AX3000
+name: Build OpenWrt-Redmi-AX3000-openwrt21.02
 
 on:
   repository_dispatch:
