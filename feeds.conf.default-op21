@@ -1,0 +1,8 @@
+src-git zzz https://github.com/Purple-wind-bell/openwrt-package-self
+src-git-full packages https://git.openwrt.org/feed/packages.git;openwrt-21.02
+src-git-full luci https://git.openwrt.org/project/luci.git;openwrt-21.02
+src-git-full routing https://git.openwrt.org/feed/routing.git;openwrt-21.02
+src-git-full telephony https://git.openwrt.org/feed/telephony.git;openwrt-21.02
+src-git kenzo https://github.com/kenzok8/openwrt-packages
+src-git small https://github.com/kenzok8/small
+#src-link custom /usr/src/openwrt/custom-feed
