@@ -24,7 +24,7 @@ env:
   REPO_BRANCH: ipq50xx-mainline-kernel-5.15-openwrt-23.05
   TARGET_NAME: Redmi-AX3000-master
   FEEDS_CONF: feeds.conf.default-master
-  CONFIG_FILE: .config-master
+  CONFIG_FILE: master.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
